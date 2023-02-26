@@ -18,7 +18,7 @@ class TaskFactory extends Factory
     {
         return [
             //
-            'description' => "PRO_". fake()->name(),
+            'description' => "PRO_". fake()->text("20"),
             'project_id' => fake()->numberBetween(0),
           
           

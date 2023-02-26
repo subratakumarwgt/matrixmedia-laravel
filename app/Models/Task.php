@@ -13,4 +13,8 @@ class Task extends Model
     public function project(){
         return $this->belongsTo(Project::class);
     }
+    public function resolveRouteBinding($value,$field = null)
+    {
+        return $this->with(['project'])->where($this->getRouteKeyName(), $value)->firstOrFail();
+    }
 }
