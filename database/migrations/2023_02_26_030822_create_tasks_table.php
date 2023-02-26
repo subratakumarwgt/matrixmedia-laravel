@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Project;
+use App\Models\Task;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -20,6 +22,7 @@ return new class extends Migration
             $table->foreign("project_id")->references("id")->on("projects")->onDelete("cascade");
             $table->timestamps();
         });
+
     }
 
     /**

@@ -18,7 +18,7 @@ class ProjectFactory extends Factory
     {
         return [
             //
-            'name' => "PRO_". fake()->name(),
+            'name' => "PRO_". fake()->text(10),
             'description' => fake()->text(),
             'deadline' => fake()->date("Y-m-d","7days"),
           
